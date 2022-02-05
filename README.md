@@ -38,8 +38,26 @@ The [Carnegie Mellon University Pronouncing Dictionary (CMUDict)][cmudict], crea
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var cmudict = require( '@stdlib/datasets-cmudict' );
+cmudict = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/datasets-cmudict@umd/bundle.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/datasets-cmudict@umd/bundle.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.cmudict;
+})()
+</script>
 ```
 
 #### cmudict( \[options] )
@@ -160,8 +178,13 @@ var data = cmudict( opts );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var cmudict = require( '@stdlib/datasets-cmudict' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/datasets-cmudict@umd/bundle.js"></script>
+<script type="text/javascript">
+(function () {
 
 var opts = {};
 
@@ -173,13 +196,16 @@ console.dir( cmudict( opts ) );
 
 opts.data = 'dict';
 console.dir( cmudict( opts ) );
+
+})()
+</script>
+</body>
+</html>
 ```
 
 </section>
 
 <!-- /.examples -->
-
-* * *
 
 
 
@@ -247,6 +273,13 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [dependencies-url]: https://david-dm.org/stdlib-js/datasets-cmudict/main
 
 -->
+
+[umd]: https://github.com/umdjs/umd
+[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+
+[deno-url]: https://github.com/stdlib-js/datasets-cmudict/tree/deno
+[umd-url]: https://github.com/stdlib-js/datasets-cmudict/tree/umd
+[esm-url]: https://github.com/stdlib-js/datasets-cmudict/tree/esm
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
 [chat-url]: https://gitter.im/stdlib-js/stdlib/
